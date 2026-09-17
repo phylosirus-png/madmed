@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phylosirus-png.github.io/madmed/sitemap.xml
