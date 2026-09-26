@@ -251,17 +251,26 @@
     </div>
     <div class="manifest">
       <div class="manifest-details">
-        <div><b>Fichier</b> — Madmed-Setup-1.0.0.exe</div>
+        <div><b>Fichier</b> — Madmed-Setup-1.1.0.exe</div>
         <div><b>Plateforme</b> — Windows 10 / 11, 64 bits</div>
         <div><b>Licence</b> — essai gratuit 15 jours, puis activation par machine</div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <b>SHA-256</b> — <span id="sha256-value" style="word-break:break-all;"></span>52476AD8DB61472A3C01BC3AFF9099836596C7E1FFE1715C7CC60FB1C0B15DF4
+          <button onclick="navigator.clipboard.writeText(document.getElementById('sha256-value').textContent); this.textContent='Copié !'; setTimeout(()=>this.textContent='Copier',1500);" style="font-family:'IBM Plex Mono',monospace; font-size:11px; background:rgba(255,255,255,0.1); color:var(--text-inverse); border:1px solid rgba(255,255,255,0.25); border-radius:4px; padding:3px 9px; cursor:pointer;">Copier</button>
+        </div>
       </div>
-      <a class="btn-download" href="https://github.com/phylosirus-png/madmed/releases/download/v1.0.0/Madmed.Setup.1.0.0.exe" download>
+      <a class="btn-download" href="https://github.com/phylosirus-png/madmed/releases/download/v1.1.0/Madmed.Setup.1.1.0.exe" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
         Télécharger maintenant!
       </a>
     </div>
     <p class="smartscreen-note">
       Au premier lancement, Windows peut afficher <b>« Windows a protégé votre ordinateur »</b> — c'est normal pour un installateur non signé numériquement. Cliquez sur <b>« Informations complémentaires »</b> puis <b>« Exécuter quand même »</b>.
+    </p>
+    <p class="smartscreen-note">
+      <b>Vérifier l'intégrité du fichier</b> (recommandé, surtout en entreprise) : après téléchargement, ouvrez PowerShell dans le dossier où se trouve le fichier et tapez
+      <code style="display:block;margin-top:6px;padding:8px 10px;background:rgba(255,255,255,0.06);border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:12px;">Get-FileHash .\Madmed-Setup-1.1.0.exe -Algorithm SHA256</code>
+      Le résultat doit correspondre exactement à l'empreinte SHA-256 ci-dessus. Si les deux ne correspondent pas, ne lancez pas l'installateur et contactez-nous.
     </p>
   </div>
 </section>
